@@ -2,7 +2,7 @@
  * @Author: Ali
  * @Date:   2018-12-16T14:09:47+01:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-12-18T08:43:36+01:00
+ * @Last modified time: 2018-12-18T09:07:42+01:00
  */
 import React from 'react'
 
@@ -11,17 +11,25 @@ const Recipes = props => (
     <div className="row">
       {props.recipes.map( recipe => {
         return (
-          <div className="col-md-4">
+          <div
+            key={recipe.recipe_id}
+            className="col-md-4"
+            style={{marginBottom:"2rem"}}>
             <div className="recipes__box">
-              <div key={recipe.recipe_id}>
                 <img
                   className="recipe__box-img"
                   src={recipe.image_url}
                   alt={recipe.title} />
                   <div className="recipe__text">
-                    <h5> { recipe.title } </h5>
+                    <h5 className="recipes__title">
+                      { recipe.title.length < 20 ? `${recipe.title}` : `${recipe.title.substring(0,25)}...` }
+                    </h5>
+                    <p className="recipes__subtitle">
+                      Publisher: <span> { recipe.publisher}
+                    </span></p>
                   </div>
-              </div>
+                  <button className="recipe_buttons"> View Recipe
+                  </button>
             </div>
           </div>
         )
