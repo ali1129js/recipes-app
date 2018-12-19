@@ -2,11 +2,18 @@
  * @Author: Ali
  * @Date:   2018-12-18T10:52:56+01:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-12-18T10:55:59+01:00
+ * @Last modified time: 2018-12-19T10:42:09+01:00
  */
-import React from 'react'
+import React, { Component } from 'react'
 
-const Recipe = () => (
- <div className=""> Recipe</div>  
-)
+class Recipe extends Component{
+  render(){
+    console.log(this.props);
+    return (
+      <div>
+        Recipe component
+      </div>
+    )
+  }
+}
 export default Recipe

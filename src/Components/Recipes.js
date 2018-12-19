@@ -2,10 +2,10 @@
  * @Author: Ali
  * @Date:   2018-12-16T14:09:47+01:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-12-18T09:07:42+01:00
+ * @Last modified time: 2018-12-19T10:43:58+01:00
  */
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 const Recipes = props => (
   <div className="container">
     <div className="row">
@@ -28,7 +28,11 @@ const Recipes = props => (
                       Publisher: <span> { recipe.publisher}
                     </span></p>
                   </div>
-                  <button className="recipe_buttons"> View Recipe
+                  <button className="recipe_buttons">
+                    <Link
+                      to={{pathname: `/recipe/${recipe.recipe_id}`, state:{ recipe:recipe.title }}}> 
+                      View Recipe
+                    </Link>
                   </button>
             </div>
           </div>
