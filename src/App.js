@@ -9,7 +9,7 @@ import Form from './Components/Form'
 import Recipes from './Components/Recipes'
 import './App.css'
 
-const API_KEY = "d6e5954a2b386a35dd8b85fbe821fa80"
+const API_KEY = "*****************************"
 
 class App extends Component {
   state = {
