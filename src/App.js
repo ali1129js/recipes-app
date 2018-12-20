@@ -2,7 +2,7 @@
  * @Author: Ali
  * @Date:   2018-12-15T13:27:09+01:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-12-16T14:40:17+01:00
+ * @Last modified time: 2018-12-20T08:44:36+01:00
  */
 import React, { Component } from 'react'
 import Form from './Components/Form'
@@ -30,6 +30,15 @@ class App extends Component {
     const data = await api_call.json()
     this.setState({recipes:data.recipes})
     console.log(this.state.recipes);
+  }
+  componentDidMount = () => {
+    const json= localStorage.getItem("recipes")
+    const recipes = JSON.parse(json)
+    this.setState({recipes})
+  }
+  componentDidUpdate = () => {
+    const recipes = JSON.stringify(this.state.recipes)
+    localStorage.setItem("recipes", recipes)
   }
   render() {
     return (
