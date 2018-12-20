@@ -6,7 +6,7 @@
  */
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-const API_KEY = "d6e5954a2b386a35dd8b85fbe821fa80"
+const API_KEY = "******************************"
 class Recipe extends Component {
   state = {
     activeRecipe: []
