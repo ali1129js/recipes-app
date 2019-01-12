@@ -2,7 +2,7 @@
  * @Author: Ali
  * @Date:   2018-12-18T10:52:56+01:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-12-20T08:35:01+01:00
+ * @Last modified time: 2018-12-20T08:53:34+01:00
  */
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
